@@ -1,0 +1,586 @@
+<?php
+
+namespace Sprint\Migration;
+
+
+class T1638520260625144454 extends Version
+{
+    protected $description = "настройки инфоблока";
+
+    protected $moduleVersion = "4.2.4";
+
+    /**
+     * @throws Exceptions\HelperException
+     * @return bool|void
+     */
+    public function up()
+    {
+        $helper = $this->getHelperManager();
+        $helper->Iblock()->saveIblockType(array (
+  'ID' => 'content',
+  'SECTIONS' => 'Y',
+  'EDIT_FILE_BEFORE' => '',
+  'EDIT_FILE_AFTER' => '',
+  'IN_RSS' => 'N',
+  'SORT' => '500',
+  'LANG' => 
+  array (
+    'ru' => 
+    array (
+      'NAME' => 'Контент',
+      'SECTION_NAME' => '',
+      'ELEMENT_NAME' => '',
+    ),
+    'en' => 
+    array (
+      'NAME' => 'content',
+      'SECTION_NAME' => 'content',
+      'ELEMENT_NAME' => 'content',
+    ),
+  ),
+));
+        $iblockId = $helper->Iblock()->saveIblock(array (
+  'IBLOCK_TYPE_ID' => 'content',
+  'LID' => 
+  array (
+    0 => 's1',
+  ),
+  'CODE' => 'articles',
+  'API_CODE' => 'articles',
+  'REST_ON' => 'N',
+  'NAME' => 'Блог',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'LIST_PAGE_URL' => '#SITE_DIR#/baza-znaniy/',
+  'DETAIL_PAGE_URL' => '#SITE_DIR#/baza-znaniy/#SECTION_CODE#/#ELEMENT_CODE#/',
+  'SECTION_PAGE_URL' => '#SITE_DIR#/baza-znaniy/#SECTION_CODE#/',
+  'CANONICAL_PAGE_URL' => NULL,
+  'PICTURE' => NULL,
+  'DESCRIPTION' => '<h1> <span style="color: #0a615c;">База знаний PocketBook</span> </h1>
+<p>
+	 Регулярно пользуетесь ридером или только планируете купить электронную книгу? В этом случае база знаний PocketBook адресована именно вам. В разделе собраны десятки полезных статей, отвечающих на многочисленные вопросы, посвящённые Е-книгам, от выбора подходящего устройства до пошаговых инструкций решения технических проблем.
+</p>
+<p>
+ <b>Обзоры</b>
+</p>
+<p>
+	 Разделы «Обзоры» и «Видеообзоры» сориентируют читателя в многообразии представленных на рынке моделей и помогут купить гаджет, на 100% отвечающий вашим запросам и предпочтениям. Так, вы узнаете, как выбрать книгу, исходя из бренда, формата, вида дисплея, ёмкости батареи, особенностей интерфейса, а также других критериев.
+</p>
+<p>
+	 Сравнение моделей облегчит непростой выбор, поскольку устройства одного класса часто различаются функционалом и техническими характеристиками. Мы раскрываем секреты: о некоторых скрытых опциях электронных книг не догадываются даже продвинутые пользователи. Подборка лайфхаков поможет сэкономить при покупке ридера в магазине или на специализированной площадке в интернете.
+</p>
+<p>
+ <b>Инструкции</b>
+</p>
+<p>
+	 В отдельном подразделе собрана подборка собственных пошаговых видеоинструкций PocketBook. Видео рассчитаны как на «чайников», так и на тех пользователей, которые уже привыкли читать с дисплея такого устройства. Потратив 1-2 минуты, вы узнаете, как в несколько кликов отсортировать библиотеку, перезагрузить ридер, обновиться до последней версии программного обеспечения, скачать нужный файл с компьютера или ноутбука.
+</p>
+<p>
+	 Ваше хобби – технологии XXI века? Ищите в базе знаний статьи, посвящённые истории развития гаджетов для чтения и перспективам самых ожидаемых новинок отрасли.
+</p>
+<p>
+ <br>
+</p>
+<p>
+ <b><span style="color: #0a615c;">База знаний PocketBook регулярно пополняется новыми статьями, видеообзорами, инструкциями. Желаем приятного и полезного чтения!</span></b>
+</p>
+<p>
+	 &nbsp;
+</p>
+ <br>',
+  'DESCRIPTION_TYPE' => 'html',
+  'RSS_TTL' => '24',
+  'RSS_ACTIVE' => 'Y',
+  'RSS_FILE_ACTIVE' => 'N',
+  'RSS_FILE_LIMIT' => NULL,
+  'RSS_FILE_DAYS' => NULL,
+  'RSS_YANDEX_ACTIVE' => 'N',
+  'XML_ID' => '4',
+  'INDEX_ELEMENT' => 'Y',
+  'INDEX_SECTION' => 'Y',
+  'WORKFLOW' => 'N',
+  'BIZPROC' => 'N',
+  'SECTION_CHOOSER' => 'L',
+  'LIST_MODE' => NULL,
+  'RIGHTS_MODE' => 'S',
+  'SECTION_PROPERTY' => 'Y',
+  'PROPERTY_INDEX' => 'N',
+  'VERSION' => '1',
+  'LAST_CONV_ELEMENT' => '0',
+  'SOCNET_GROUP_ID' => NULL,
+  'EDIT_FILE_BEFORE' => NULL,
+  'EDIT_FILE_AFTER' => NULL,
+  'SECTIONS_NAME' => 'Разделы',
+  'SECTION_NAME' => 'Раздел',
+  'ELEMENTS_NAME' => 'Статьи',
+  'ELEMENT_NAME' => 'Статья',
+  'FULLTEXT_INDEX' => 'N',
+  'EXTERNAL_ID' => '4',
+  'LANG_DIR' => '/',
+  'SERVER_NAME' => 'alps.altay.kz',
+  'IPROPERTY_TEMPLATES' => 
+  array (
+    'SECTION_META_TITLE' => '{=this.Name}',
+    'ELEMENT_META_TITLE' => '{=this.Name}',
+    'ELEMENT_META_DESCRIPTION' => '{=this.PreviewText}',
+  ),
+  'ELEMENT_ADD' => 'Добавить статью',
+  'ELEMENT_EDIT' => 'Изменить статью',
+  'ELEMENT_DELETE' => 'Удалить статью',
+  'SECTION_ADD' => 'Добавить раздел',
+  'SECTION_EDIT' => 'Изменить раздел',
+  'SECTION_DELETE' => 'Удалить раздел',
+));
+        $helper->Iblock()->saveIblockFields($iblockId, array (
+  'IBLOCK_SECTION' => 
+  array (
+    'NAME' => 'Привязка к разделам',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'KEEP_IBLOCK_SECTION_ID' => 'N',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'ACTIVE' => 
+  array (
+    'NAME' => 'Активность',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'Y',
+    'VISIBLE' => 'Y',
+  ),
+  'ACTIVE_FROM' => 
+  array (
+    'NAME' => 'Начало активности',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'ACTIVE_TO' => 
+  array (
+    'NAME' => 'Окончание активности',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'SORT' => 
+  array (
+    'NAME' => 'Сортировка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '500',
+    'VISIBLE' => 'Y',
+  ),
+  'NAME' => 
+  array (
+    'NAME' => 'Название',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'PREVIEW_PICTURE' => 
+  array (
+    'NAME' => 'Картинка для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'FROM_DETAIL' => 'N',
+      'UPDATE_WITH_DETAIL' => 'N',
+      'DELETE_WITH_DETAIL' => 'N',
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => '',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => '',
+      'WATERMARK_FILE_ORDER' => '',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'PREVIEW_TEXT_TYPE' => 
+  array (
+    'NAME' => 'Тип описания для анонса',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+    'VISIBLE' => 'Y',
+  ),
+  'PREVIEW_TEXT' => 
+  array (
+    'NAME' => 'Описание для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'DETAIL_PICTURE' => 
+  array (
+    'NAME' => 'Детальная картинка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => '',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => '',
+      'WATERMARK_FILE_ORDER' => '',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'DETAIL_TEXT_TYPE' => 
+  array (
+    'NAME' => 'Тип детального описания',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+    'VISIBLE' => 'Y',
+  ),
+  'DETAIL_TEXT' => 
+  array (
+    'NAME' => 'Детальное описание',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'XML_ID' => 
+  array (
+    'NAME' => 'Внешний код',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'CODE' => 
+  array (
+    'NAME' => 'Символьный код',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'UNIQUE' => 'N',
+      'TRANSLITERATION' => 'N',
+      'TRANS_LEN' => 100,
+      'TRANS_CASE' => 'L',
+      'TRANS_SPACE' => '-',
+      'TRANS_OTHER' => '-',
+      'TRANS_EAT' => 'Y',
+      'USE_GOOGLE' => 'N',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'TAGS' => 
+  array (
+    'NAME' => 'Теги',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_NAME' => 
+  array (
+    'NAME' => 'Название',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_PICTURE' => 
+  array (
+    'NAME' => 'Картинка для анонса',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'FROM_DETAIL' => 'N',
+      'UPDATE_WITH_DETAIL' => 'N',
+      'DELETE_WITH_DETAIL' => 'N',
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => '',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => '',
+      'WATERMARK_FILE_ORDER' => '',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_DESCRIPTION_TYPE' => 
+  array (
+    'NAME' => 'Тип описания',
+    'IS_REQUIRED' => 'Y',
+    'DEFAULT_VALUE' => 'text',
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_DESCRIPTION' => 
+  array (
+    'NAME' => 'Описание',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_DETAIL_PICTURE' => 
+  array (
+    'NAME' => 'Детальная картинка',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'SCALE' => 'N',
+      'WIDTH' => '',
+      'HEIGHT' => '',
+      'IGNORE_ERRORS' => 'N',
+      'METHOD' => 'resample',
+      'COMPRESSION' => 95,
+      'USE_WATERMARK_TEXT' => 'N',
+      'WATERMARK_TEXT' => '',
+      'WATERMARK_TEXT_FONT' => '',
+      'WATERMARK_TEXT_COLOR' => '',
+      'WATERMARK_TEXT_SIZE' => '',
+      'WATERMARK_TEXT_POSITION' => '',
+      'USE_WATERMARK_FILE' => 'N',
+      'WATERMARK_FILE' => '',
+      'WATERMARK_FILE_ALPHA' => '',
+      'WATERMARK_FILE_POSITION' => '',
+      'WATERMARK_FILE_ORDER' => '',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_XML_ID' => 
+  array (
+    'NAME' => 'Внешний код',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => '',
+    'VISIBLE' => 'Y',
+  ),
+  'SECTION_CODE' => 
+  array (
+    'NAME' => 'Символьный код',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => 
+    array (
+      'UNIQUE' => 'N',
+      'TRANSLITERATION' => 'N',
+      'TRANS_LEN' => 100,
+      'TRANS_CASE' => 'L',
+      'TRANS_SPACE' => '-',
+      'TRANS_OTHER' => '-',
+      'TRANS_EAT' => 'Y',
+      'USE_GOOGLE' => 'N',
+    ),
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_SECTION_ADD' => 
+  array (
+    'NAME' => 'LOG_SECTION_ADD',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_SECTION_EDIT' => 
+  array (
+    'NAME' => 'LOG_SECTION_EDIT',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_SECTION_DELETE' => 
+  array (
+    'NAME' => 'LOG_SECTION_DELETE',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_ELEMENT_ADD' => 
+  array (
+    'NAME' => 'LOG_ELEMENT_ADD',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_ELEMENT_EDIT' => 
+  array (
+    'NAME' => 'LOG_ELEMENT_EDIT',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+  'LOG_ELEMENT_DELETE' => 
+  array (
+    'NAME' => 'LOG_ELEMENT_DELETE',
+    'IS_REQUIRED' => 'N',
+    'DEFAULT_VALUE' => NULL,
+    'VISIBLE' => 'Y',
+  ),
+));
+    $helper->Iblock()->saveGroupPermissions($iblockId, array (
+  'everyone' => 'R',
+));
+        $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Выберите устройства',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'DEVICE_SELECT',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'E',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'Y',
+  'XML_ID' => '39',
+  'FILE_TYPE' => NULL,
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => NULL,
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => NULL,
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Дополнительно',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'EXTRA_TEXT',
+  'DEFAULT_VALUE' => 
+  array (
+    'TEXT' => '',
+    'TYPE' => 'HTML',
+  ),
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '40',
+  'FILE_TYPE' => NULL,
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => NULL,
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => 'HTML',
+  'USER_TYPE_SETTINGS' => 
+  array (
+    'height' => 200,
+  ),
+  'HINT' => NULL,
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'Автор',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'AUTHOR',
+  'DEFAULT_VALUE' => '',
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '185',
+  'FILE_TYPE' => NULL,
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => NULL,
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => NULL,
+  'USER_TYPE_SETTINGS' => NULL,
+  'HINT' => NULL,
+));
+            $helper->Iblock()->saveProperty($iblockId, array (
+  'NAME' => 'EDITORJS',
+  'ACTIVE' => 'Y',
+  'SORT' => '500',
+  'CODE' => 'EDITORJS',
+  'DEFAULT_VALUE' => 
+  array (
+    'TEXT' => '',
+    'TYPE' => 'HTML',
+  ),
+  'PROPERTY_TYPE' => 'S',
+  'ROW_COUNT' => '1',
+  'COL_COUNT' => '30',
+  'LIST_TYPE' => 'L',
+  'MULTIPLE' => 'N',
+  'XML_ID' => '186',
+  'FILE_TYPE' => NULL,
+  'MULTIPLE_CNT' => '5',
+  'LINK_IBLOCK_ID' => NULL,
+  'WITH_DESCRIPTION' => 'N',
+  'SEARCHABLE' => 'N',
+  'FILTRABLE' => 'N',
+  'IS_REQUIRED' => 'N',
+  'VERSION' => '1',
+  'USER_TYPE' => 'HTML',
+  'USER_TYPE_SETTINGS' => 
+  array (
+    'height' => 200,
+  ),
+  'HINT' => NULL,
+));
+        $helper->UserOptions()->saveElementGrid($iblockId, array (
+  'views' => 
+  array (
+    'default' => 
+    array (
+      'columns' => 
+      array (
+        0 => '',
+      ),
+      'columns_sizes' => 
+      array (
+        'expand' => 1,
+        'columns' => 
+        array (
+        ),
+      ),
+      'sticked_columns' => 
+      array (
+      ),
+      'custom_names' => 
+      array (
+      ),
+    ),
+  ),
+  'filters' => 
+  array (
+  ),
+  'current_view' => 'default',
+));
+
+    }
+
+    public function down()
+    {
+        //your code ...
+    }
+}

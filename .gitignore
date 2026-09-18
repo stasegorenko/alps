@@ -1,10 +1,10 @@
 # Системные файлы и папки ОС
 .DS_Store
 Thumbs.db 
-bitrix/ 
-local/
+bitrix/  
 upload/
 reports/
 test/
 amo/
-rooms/phpQuery
+rooms/phpQuery/
+local/php_interface/vendor/
