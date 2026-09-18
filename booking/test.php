@@ -48,24 +48,7 @@ use Altaykz\OrdersTable;
 // }
 
  
-global $DB;
-//$res = $DB->Query('SELECT * FROM altaykz_orders');
-//$res = $DB->Query("ALTER TABLE altaykz_orders ADD SITE_ID VARCHAR(255)");
-// $res = $DB->Query("ALTER TABLE altaykz_orders MODIFY `CHILDS` int"); 
-//$res = $DB->Query("DELETE FROM altaykz_orders WHERE ID > 63"); 
-
-//vd($res->Fetch());
-
-
-// $rooms = CRest::call('crm.deal.userfield.list',['filter' => ["ID" => "387"]]); 
-// foreach($rooms['result'][0]['LIST'] as $room){
-// 	$arRooms[$room['ID']] = $room['VALUE'];
-// }  
-  
-// echo 'Все значения в crm: ';
-// vd($arRooms);
-
-
+global $DB; 
 
 
 $date = '2023-11-12 22:43:00';  
