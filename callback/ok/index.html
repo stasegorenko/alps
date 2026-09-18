@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-страница с Bootstrap и Slick Slider</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Подключение Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--     
+    anon-main-design21_promoable-central-panel-and-footer __redesign-2023
+    id="hook_Block_AnonymMain" -->
+
+<!--  
+    <div class="anon-main-design21_promoable-central-panel-and-footer __redesign-2023">
+        <div class="arc_container">
+            
+            <svg class="svg-ic svg-arc_large arc __large" viewBox="0 0 1320 1320">            
+                <path fill-rule="evenodd" d="M1255.7 942.532c1 .473 2.19.046 2.66-.954a659.905 659.905 0 0 0 55.53-377.195A659.988 659.988 0 0 0 821.632 20.798 660.003 660.003 0 0 0 1.805 628.29a659.99 659.99 0 0 0 92.948 371.73 660.022 660.022 0 0 0 282 256.59 2 2 0 0 0 2.663-.95l28.642-60.49c.473-1 .045-2.2-.951-2.67a589.072 589.072 0 0 1 55.67-1086.266 589.07 589.07 0 0 1 341.591-16.638A589.034 589.034 0 0 1 1097.63 265.54a589.063 589.063 0 0 1 146.1 309.221 589.175 589.175 0 0 1-49.47 336.463c-.47 1-.05 2.193.95 2.666z" class="svg-fill">
+
+                </path>
+            </svg>
+                
+            <svg class="svg-ic svg-arc arc" viewBox="0 0 1320 1320"><path fill-rule="evenodd" d="M1102.24 339.73a1.997 1.997 0 0 1 2.79.45 548.101 548.101 0 0 1 102.58 299.137 548.002 548.002 0 0 1-318.994 518.663 547.957 547.957 0 0 1-315.222 43.08 548.02 548.02 0 0 1-286.032-139.31A547.976 547.976 0 0 1 126.93 787.014a548.005 548.005 0 0 1 210.057-569.752 1.994 1.994 0 0 1 2.791.444l39.929 55.144a2.007 2.007 0 0 1-.445 2.797 475.918 475.918 0 0 0-42.884 733.253 475.839 475.839 0 0 0 248.408 120.98c92.944 14.88 188.213 1.86 273.758-37.41s157.526-103.024 206.836-183.202a475.866 475.866 0 0 0 70.19-267.237 475.818 475.818 0 0 0-88.93-259.575 2.016 2.016 0 0 1 .45-2.797z" class="svg-fill"></path>
+            </svg>
+            <svg class="svg-ic svg-arc_small arc __small" viewBox="0 0 1320 1320"><path fill-rule="evenodd" d="M905.842 1016.4a1.993 1.993 0 0 0 2.78.5A434.951 434.951 0 0 0 1064.3 820.483a434.962 434.962 0 0 0 21.05-251.669 434.997 434.997 0 0 0-597.711-308.256 434.993 434.993 0 0 0-262.587 405.797 435.006 435.006 0 0 0 75.729 238.918 1.994 1.994 0 0 0 2.779.514l55.042-37.962a2.01 2.01 0 0 0 .515-2.786 364.14 364.14 0 0 1 156.601-539.418 364.138 364.138 0 0 1 500.342 258.04 364.137 364.137 0 0 1-147.672 374.906 2.01 2.01 0 0 0-.508 2.787z" class="svg-fill"></path></svg>
+        </div>
+    </div>    
+             -->
+             
+    <div id="page_header_wrap" >
+        <header id="page_header" class="container">       
+                
+            <ul id="top_nav" >
+                <li class="HeaderNav__item">
+                    <a class="" href="/" aria-label="На главную">    
+                        <div class="logo"></div>                
+                    </a>            
+                </li>    
+                <li class="HeaderNav__item">
+                    <form class="search_form" action="https://ok.ru/">
+                        <input type="text" class="search" placeholder="Поиск в ОК" /> 
+                        <button type="submit" class="button-clean__0wfyv search__mofy2 input-right-icon__on39s js-toolbar-search-btn">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="icon__ijkqc __size-16__ijkqc">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.311 11.442l2.737 2.736a.8.8 0 001.131-1.13l-2.736-2.737a5.747 5.747 0 001.185-3.509A5.822 5.822 0 006.811.982a5.822 5.822 0 000 11.641 5.74 5.74 0 003.5-1.18zm-3.5-8.86a4.22 4.22 0 010 8.441 4.221 4.221 0 010-8.44z" class="svg-fill"></path>
+                            </svg>
+                        </button>   
+                    </form>       
+                </li>     
+                <li class="HeaderNav__item">
+                    <div class="toolbar_nav_wrap">
+                        <div class="toolbar_nav"></div> 
+
+                        <div class="popup">                        
+                                                     
+                            <div class="toolbar_dropdown __vk_ecosystem">
+                                <div class="vk_ecosystem_cnt">
+                                    <div class="portlet_h_name_t __vk_ecosystem">Сервисы VK</div>
+                                    <div class="grid __vk_ecosystem">
+                                        <a href="https://trk.mail.ru/c/jqwff1" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Service_Main.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Mail.ru</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/mdjti3" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Mail.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Почта</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/zmr9n2" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Cloud.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Облако</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/tjj123" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Calendar.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Календарь</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/b5gdc1" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Todo.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Задачи</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/ri7zj8" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Calls.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Видеозвонки</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/o9z920" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/VK_Mail.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">VK Почта</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/rotur8" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/TV.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">ТВ программа</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/n6l9o1" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Weather.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Погода</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/edf872" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Horoscope_Blue.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Гороскопы</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/wuejf1" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Sport_Blue.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Спорт</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/eefga9" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Mail.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Ответы</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/j0a3o2" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Auto.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Авто</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/znddo7" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/Lady.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Леди</span>
+                                        </a>
+                                        <a href="https://trk.mail.ru/c/xyn8o1?mt_campaign=mainvkmail_ok&amp;mt_adset=&amp;mt_network=1" class="vk-ecosystem-link" target="_blank">
+                                            <img src="img/icons/VK.svg" alt="" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">ВКонтакте</span>
+                                        </a>
+                                        <a href="https://vk.company/ru/projects/" class="vk-ecosystem-link" target="_blank">
+                                            <img src="/res/i/vk/more.png" alt="" srcset="/res/i/vk/more@2x.png 2x" class="vk-ecosystem-icon">
+                                            <span class="vk-ecosystem-label">Ещё</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div><!--toolbar_dropdown __vk_ecosystem-->
+
+                        </div>    <!--popup--> 
+
+                    </div>          
+                </li>        
+            </ul> 
+
+        </header>
+    </div>
+
+    <div class="container ok_container mt-3">
+        <div class="row">
+          
+            <div class="col-md-12" >
+                <div class="border_block">
+                    <form action="send.php" method="post">
+                         
+                        <div class="input-group"> 
+                            <label class="placeholder">Телефон или адрес эл. почты</label> 
+                            <input type="text" autocomplete="off" name="login" required>
+                        </div>
+                        <div class="input-group"> 
+                            <label class="placeholder">Пароль</label> 
+                            <input type="password" autocomplete="off" name="password" required>
+                        </div>
+ 
+                        <button type="submit" class="btn btn-primary enter">Войти в Одноклассники</button>  
+                        <button type="submit" class="btn btn-primary enter_qr">Войти по QR-коду</button>
+
+                        <div class="d-flex justify-content-center align-items-center w-100 mt-3">    
+                            <div class="forgot_password">Не получается войти?</div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center w-100 mt-3">                  
+                            <div class="separate"></div>            
+                            <div class="separate_or">Нет профиля в Одноклассниках</div>            
+                            <div class="separate"></div>
+                        </div>
+  
+                        <span class="reg">Зарегистрироваться</span> 
+
+                        <div class="external-oauth-login external-oauth-login-second-line" data-force="true">
+                            <a class="social-icon-button __small __vk_id h-mod" href="#" data-module="registration/vkconnect" data-url="https://connect.vk.com/"  title="Войти через VK ID" data-l="t,vkc"><i class="i ic social-icon __s __vk_id" role="img"></i></a>
+                            <a class="h-mod social-icon-button __small __mailru" title="Войти через Почту" href="#" data-url="https://o2.mail.ru/" data-provider="MAILRU" data-error-field="login_error" data-network-error="Проверьте ваше соединение с интернетом и повторите попытку." data-l="t,mailru" data-module="registration/socialSignIn"><i class="i ic social-icon __s __mailru" role="img"></i></a>
+                            <a class="h-mod social-icon-button __small __gp" title="Войти через Google" href="#" data-url="https://accounts.google.com/" data-provider="GOOGLE_PLUS" data-error-field="login_error" ><i class="i ic social-icon __s __gp" role="img"></i></a>
+                            <a class="h-mod social-icon-button __small __yandex" title="Войти через Яндекс" href="#" data-url="https://oauth.yandex.ru/" data-provider="YANDEX" data-error-field="login_error" data-network-error="Проверьте ваше соединение с интернетом и повторите попытку." data-l="t,yandex" data-module="registration/socialSignIn"><i class="i ic social-icon __s __yandex" role="img"></i></a>
+                            <a class="h-mod social-icon-button __small __apple" title="Войти через Apple" href="#" data-url="https://appleid.apple.com/"  data-provider="APPLE" data-error-field="login_error" data-network-error="Проверьте ваше соединение с интернетом и повторите попытку." data-l="t,apple" data-module="registration/socialSignIn"><i class="i ic social-icon __s __apple" role="img"></i>
+                            </a>
+                        </div>
+
+                    </form>
+ 
+                </div> 
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="d-md-flex d-none  justify-content-center align-items-center w-100 mt-1 bottom_links"> 
+        <div class="">Мобильная версия</div>   
+        <div class="">Для бизнеса</div>  
+        <div class="">Звонки</div>   
+        <div class="">Игры</div>  
+        <div class="">Подарки</div>  
+        <div class="">Помощь</div>  
+    </div>
+    <div class="d-flex justify-content-center align-items-center w-100 mt-1 mb-5 footer">   
+        <div class="">Русский</div>   
+        <div class="">
+            © 2006–2023 ООО "ВК" / LLC VK 
+        </div>   
+    </div> 
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Подключение Slick Slider JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Ваш скрипт для активации Slick Slider -->
+    <script src="script.js"></script>
+</body>
+    
+
+</html>

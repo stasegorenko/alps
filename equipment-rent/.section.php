@@ -1,0 +1,3 @@
+<?
+$sSectionName="equipment-rent";
+?>

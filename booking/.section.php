@@ -1,0 +1,6 @@
+<?
+$sSectionName = "booking";
+$arDirProperties = array(
+
+);
+?>

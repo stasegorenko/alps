@@ -1,0 +1,10 @@
+# Системные файлы и папки ОС
+.DS_Store
+Thumbs.db 
+bitrix/ 
+local/
+upload/
+reports/
+test/
+amo/
+rooms/phpQuery
